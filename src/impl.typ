@@ -1,10 +1,10 @@
 #let make-venue = move(dy: -1.9cm, {
   box(rect(fill: luma(140), inset: 10pt, height: 2.5cm)[
     #set text(font: "Zen Old Mincho", fill: white, weight: 700, size: 20pt)
-    #align(bottom)[OXFORD]
+    #align(bottom)[PROGRESS]
   ])
   set text(22pt, font: "Zen Kaku Gothic New")
-  box(pad(left: 10pt, bottom: 10pt, [PHYSICS]))
+  box(pad(left: 10pt, bottom: 10pt, [REPORT]))
 })
 
 #let make-title(

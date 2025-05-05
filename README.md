@@ -1,7 +1,6 @@
-# The `graceful-genetics` Package
-<div align="center">Version 0.2.0</div>
+# typst-taniii-style
 
-A recreation of the Oxford Physics template shown on the typst.app homepage.
+This is a typst template for creating papers in the Taniii style. Forked from https://github.com/JamesxX/graceful-genetics; Thanks for the original work.
 
 ## Media
 
@@ -16,40 +15,24 @@ A recreation of the Oxford Physics template shown on the typst.app homepage.
 To use this template, simply import it as shown below:
 
 ```typ
-#import "@preview/graceful-genetics:0.2.0"
+#import "@local/typst-taniii-style:0.0.1"
 
-#show: graceful-genetics.template.with(
-  title: [Towards Swifter Interstellar Mail Delivery],
+#show: typst-taniii-style.template.with(
+  title: [タイトル],
   authors: (
     (
-      name: "Johanna Swift",
-      department: "Primary Logistics Department",
-      institution: "Delivery Institute",
-      city: "Berlin",
-      country: "Germany",
-      mail: "swift@delivery.de",
-    ),
-    (
-      name: "Egon Stellaris",
-      department: "Communications Group",
-      institution: "Space Institute",
-      city: "Florence",
-      country: "Italy",
-      mail: "stegonaris@space.it",
-    ),
-    (
-      name: "Oliver Liam",
-      department: "Missing Letters Task Force",
-      institution: "Mail Institute",
-      city: "Budapest",
-      country: "Hungary",
-      mail: "oliver.liam@mail.hu",
+      name: "name",
+      department: "department",
+      institution: "institution",
+      city: "city",
+      country: "country",
+      mail: "mail@example.com",
     ),
   ),
   date: (
-    year: 2022,
+    year: 2025,
     month: "May",
-    day: 17,
+    day: 7,
   ),
   keywords: (
     "Space",
@@ -58,9 +41,12 @@ To use this template, simply import it as shown below:
     "Faster-than-Light",
     "Mars",
   ),
-  doi: "10:7891/120948510",
+  doi: "",
   abstract: [
     Recent advances in space-based document processing have enabled faster mail delivery between different planets of a solar system. Given the time it takes for a message to be transmitted from one planet to the next, its estimated that even a one-way trip to a distant destination could take up to one year. During these periods of interplanetary mail delivery there is a slight possibility of mail being lost in transit. This issue is considered so serious that space management employs P.I. agents to track down and retrieve lost mail. We propose A-Mail, a new anti-matter based approach that can ensure that mail loss occurring during interplanetary transit is unobservable and therefore potentially undetectable. Going even further, we extend A-Mail to predict problems and apply existing and new best practices to ensure the mail is delivered without any issues. We call this extension AI-Mail.
   ]
 )
+
+// セクション
+= 1.
 ```
