@@ -10,6 +10,7 @@
 #let make-title(
   title,
   authors,
+  date,
   abstract,
   keywords,
 ) = {
@@ -35,7 +36,14 @@
     #link("mailto:" + author.mail) \
   ]
 
-  v(8pt)
+  if date != none {
+    v(8pt)
+    set text(10pt)
+    align(right)[#date]
+    v(8pt)
+  } else {
+    v(8pt)
+  }
   set text(10pt)
   set par(justify: true)
 
@@ -75,8 +83,8 @@
 
     place(make-venue, top, scope: "parent", float: true)
     place(
-      make-title(title, authors, abstract, keywords), 
-      top, 
+      make-title(title, authors, date, abstract, keywords),
+      top,
       scope: "parent",
       float: true
     )

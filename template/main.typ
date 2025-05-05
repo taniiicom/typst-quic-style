@@ -1,6 +1,8 @@
 #import "@preview/graceful-genetics:0.2.0" as graceful-genetics
 #import "@preview/physica:0.9.3"
 
+#let my-date = datetime(year: 2022, month: 5, day: 17)
+
 #show: graceful-genetics.template.with(
   title: [Towards Swifter Interstellar Mail Delivery],
   authors: (
@@ -29,11 +31,8 @@
       mail: "oliver.liam@mail.hu",
     ),
   ),
-  date: (
-    year: 2022,
-    month: "May",
-    day: 17,
-  ),
+  // Format the date before passing
+  date: my-date.display("[year]-[month]-[day]"),
   keywords: (
     "Space",
     "Mail",
