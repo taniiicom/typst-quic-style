@@ -1,6 +1,6 @@
-#import "@local/typst-taniii-style:0.0.1"
+#import "@local/typst-quic-style:0.0.1"
 
-#show: typst-taniii-style.template.with(
+#show: typst-quic-style.template.with(
   title: [富士山周辺における高山植物の生態調査ノート],
   authors: (
     (

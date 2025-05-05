@@ -1,6 +1,6 @@
-#import "@local/typst-taniii-style:0.0.1"
+#import "@local/typst-quic-style:0.0.1"
 
-#show: typst-taniii-style.template.with(
+#show: typst-quic-style.template.with(
   title: [量子エラー訂正コードの最適化に関する研究進捗報告],
   authors: (
     (

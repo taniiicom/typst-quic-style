@@ -1,4 +1,4 @@
-# typst-taniii-style
+# typst-quic-style
 
 This is a typst template for creating papers in the Taniii style. Forked from https://github.com/JamesxX/graceful-genetics; Thanks for the original work.
 
@@ -15,9 +15,9 @@ This is a typst template for creating papers in the Taniii style. Forked from ht
 To use this template, simply import it as shown below:
 
 ```typ
-#import "@local/typst-taniii-style:0.0.1"
+#import "@local/typst-quic-style:0.0.1"
 
-#show: typst-taniii-style.template.with(
+#show: typst-quic-style.template.with(
   title: [タイトル],
   authors: (
     (

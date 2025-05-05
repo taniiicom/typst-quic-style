@@ -1,6 +1,6 @@
-#import "@local/typst-taniii-style:0.0.1"
+#import "@local/typst-quic-style:0.0.1"
 
-#show: typst-taniii-style.template.with(
+#show: typst-quic-style.template.with(
   title: [日本語における助詞「は」と「が」の使い分けに関する認知言語学的考察],
   authors: (
     (

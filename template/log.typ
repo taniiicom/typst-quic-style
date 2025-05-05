@@ -1,7 +1,7 @@
 
-#import "@local/typst-taniii-style:0.0.1"
+#import "@local/typst-quic-style:0.0.1"
 
-#show: typst-taniii-style.template.with(
+#show: typst-quic-style.template.with(
   title: [実験 : テルミット反応における酸化剤の影響],
   authors: (
     (
