@@ -1,15 +1,15 @@
 # for a description of available keys, see https://github.com/typst/packages/?tab=readme-ov-file#package-format
 
 [package]
-name = "graceful-genetics"
-version = "0.2.0"
+name = "typst-taniii-style"
+version = "0.0.1"
 compiler = "0.12.0"
 entrypoint = "src/lib.typ"
-authors = ["James R. Swift"]
-license = "Unlicense"
-description = "A paper template with which to publish in journals and at conferences"
+authors = ["taniiicom"]
+license = "MIT"
+description = "This is a typst template for creating papers in the Taniii style. Forked from https://github.com/JamesxX/graceful-genetics; Thanks for the original work."
 homepage = ""
-repository = "https://github.com/JamesxX/graceful-genetics"
+repository = "https://github.com/taniiicom/typst-taniii-style"
 keywords = ["paper", "article", "journal", "conference"]
 categories = ["paper"]
 exclude = [
@@ -26,4 +26,3 @@ exclude = [
 path = "template"
 entrypoint = "main.typ"
 thumbnail = "thumbnails/1.png"
-

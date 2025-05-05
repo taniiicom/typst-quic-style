@@ -1,9 +1,9 @@
 #let make-venue = move(dy: -1.9cm, {
   box(rect(fill: luma(140), inset: 10pt, height: 2.5cm)[
-    #set text(font: "TeX Gyre Pagella", fill: white, weight: 700, size: 20pt)
+    #set text(font: "Zen Old Mincho", fill: white, weight: 700, size: 20pt)
     #align(bottom)[OXFORD]
   ])
-  set text(22pt, font: "TeX Gyre Heros")
+  set text(22pt, font: "Zen Kaku Gothic New")
   box(pad(left: 10pt, bottom: 10pt, [PHYSICS]))
 })
 
@@ -14,7 +14,7 @@
   keywords,
 ) = {
   set par(spacing: 1em)
-  set text(font: "TeX Gyre Heros")
+  set text(font: "Zen Kaku Gothic New")
   
   par(
     justify: false,
@@ -41,9 +41,9 @@
 
   [
     #heading(outlined: false, bookmarked: false)[Abstract]
-    #text(font: "TeX Gyre Pagella", abstract)
+    #text(font: "Zen Old Mincho", abstract)
     #v(3pt)
-    *Keywords:* #keywords.join(text(font: "TeX Gyre Pagella", "; "))
+    *Keywords:* #keywords.join(text(font: "Zen Old Mincho", "; "))
   ]
   v(18pt)
 }
@@ -65,11 +65,11 @@
       columns: 2
     )
     set par(justify: true)
-    set text(10pt, font: "TeX Gyre Pagella")
+    set text(10pt, font: "Zen Old Mincho")
     set list(indent: 8pt)
     // show link: set text(underline: false)
     show heading: set text(size: 11pt)
-    show heading.where(level: 1): set text(font: "TeX Gyre Heros", fill: rgb("004b71"), size: 12pt)
+    show heading.where(level: 1): set text(font: "Zen Kaku Gothic New", fill: rgb("004b71"), size: 12pt)
     show heading: set block(below: 8pt)
     show heading.where(level: 1): set block(below: 12pt)
 
