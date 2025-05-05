@@ -1,11 +1,39 @@
-#let make-venue = move(dy: -1.9cm, {
-  box(rect(fill: luma(140), inset: 10pt, height: 2.5cm)[
-    #set text(font: "Zen Old Mincho", fill: white, weight: 700, size: 20pt)
-    #align(bottom)[PROGRESS]
-  ])
-  set text(22pt, font: "Zen Kaku Gothic New")
-  box(pad(left: 10pt, bottom: 10pt, [REPORT]))
-})
+#let make-venue(doc_type) = {
+  let top_text = ""
+  let bottom_text = ""
+  let fill_color = luma(140) // Default color
+
+  if doc_type == "PROGRESS_REPORT" {
+    top_text = "PROGRESS"
+    bottom_text = "REPORT"
+    fill_color = rgb("#ffa500") // 例: オレンジ系の色
+  } else if doc_type == "PAPER" {
+    top_text = "PAPER"
+    bottom_text = "" // PAPER の場合は下のテキストなし
+    fill_color = rgb("#4169e1") // 例: 青系の色
+  } else if doc_type == "NOTE" {
+    top_text = "NOTE"
+    bottom_text = "" // NOTE の場合は下のテキストなし
+    fill_color = rgb("#3cb371") // 例: 緑系の色
+  } else if doc_type == "LOG" {
+    top_text = "LOG"
+    bottom_text = "" // LOG の場合は下のテキストなし
+    fill_color = luma(140)
+  }
+  // 他のタイプが必要な場合はここに追加
+
+  move(dy: -1.9cm, {
+    box(rect(fill: fill_color, inset: 10pt, height: 2.5cm)[
+      #set text(font: "Zen Old Mincho", fill: white, weight: 700, size: 20pt)
+      #align(bottom)[#top_text] // 変数を使用
+    ])
+    set text(22pt, font: "Zen Kaku Gothic New")
+    // 下のテキストが存在する場合のみ表示
+    if bottom_text != "" {
+      box(pad(left: 10pt, bottom: 10pt, [#bottom_text])) // 変数を使用
+    }
+  })
+}
 
 #let make-title(
   title,
@@ -63,6 +91,7 @@
     doi: "",
     keywords: (),
     abstract: [],
+    doc_type: "PROGRESS_REPORT", // <--- 追加 (デフォルト値付き)
     make-venue: make-venue,
     make-title: make-title,
     body,
@@ -81,7 +110,8 @@
     show heading: set block(below: 8pt)
     show heading.where(level: 1): set block(below: 12pt)
 
-    place(make-venue, top, scope: "parent", float: true)
+    // make-venue に doc_type を渡すように変更
+    place(make-venue(doc_type), top, scope: "parent", float: true) // <--- 変更
     place(
       make-title(title, authors, date, abstract, keywords),
       top,
