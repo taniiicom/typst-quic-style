@@ -1,5 +1,7 @@
 # typst-quic-style
 
+![](thumbnails/typst-quic-style-design.png)
+
 This is a typst template for creating papers in the Taniii style. Forked from https://github.com/JamesxX/graceful-genetics; Thanks for the original work.
 
 ## Media
