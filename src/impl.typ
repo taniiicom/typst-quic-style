@@ -22,17 +22,22 @@
   }
   // 他のタイプが必要な場合はここに追加
 
-  move(dy: -1.9cm, {
-    box(rect(fill: fill_color, inset: 10pt, height: 2.5cm)[
-      #set text(font: "Zen Old Mincho", fill: white, weight: 700, size: 20pt)
-      #align(bottom)[#top_text] // 変数を使用
-    ])
-    set text(22pt, font: "Zen Kaku Gothic New")
-    // 下のテキストが存在する場合のみ表示
-    if bottom_text != "" {
-      box(pad(left: 10pt, bottom: 10pt, [#bottom_text])) // 変数を使用
-    }
-  })
+  move(
+    dy: -1.9cm,
+    {
+      box(
+        rect(fill: fill_color, inset: 10pt, height: 2.5cm)[
+          #set text(font: "Zen Old Mincho", fill: white, weight: 700, size: 20pt)
+          #align(bottom)[#top_text] // 変数を使用
+        ],
+      )
+      set text(22pt, font: "Zen Kaku Gothic New")
+      // 下のテキストが存在する場合のみ表示
+      if bottom_text != "" {
+        box(pad(left: 10pt, bottom: 10pt, [#bottom_text])) // 変数を使用
+      }
+    },
+  )
 }
 
 #let make-title(
@@ -42,24 +47,34 @@
   abstract,
   keywords,
 ) = {
-  set par(spacing: 1em)
-  set text(font: "Zen Kaku Gothic New")
-  
-  par(
-    justify: false,
-    text(24pt, fill: rgb("004b71"), title, weight: "bold")
+  // タイトルでは, 字下げを打ち消し
+  set par(
+    justify: true,
+    leading: 1.1em,
+    spacing: 1.9em,
+    first-line-indent: (
+      all: false,
+      amount: 0pt,
+    ),
   )
 
-  text(12pt,
-    authors.enumerate()
-    .map(((i, author)) => box[#author.name #super[#(i+1)]])
-    .join(", ")
+  set par(spacing: 1em)
+  set text(font: "Zen Kaku Gothic New")
+
+  par(
+    justify: false,
+    text(24pt, fill: rgb("004b71"), title, weight: "bold"),
+  )
+
+  text(
+    12pt,
+    authors.enumerate().map(((i, author)) => box[#author.name #super[#(i + 1)]]).join(", "),
   )
   parbreak()
 
   for (i, author) in authors.enumerate() [
     #set text(8pt)
-    #super[#(i+1)]
+    #super[#(i + 1)]
     #author.institution
     #link("mailto:" + author.mail) \
   ]
@@ -85,45 +100,61 @@
 }
 
 #let template(
-    title: [],
-    authors: (),
-    date: [],
-    doi: "",
-    keywords: (),
-    abstract: [],
-    doc_type: "PROGRESS_REPORT", // <--- 追加 (デフォルト値付き)
-    make-venue: make-venue,
-    make-title: make-title,
-    body,
+  title: [],
+  authors: (),
+  date: [],
+  doi: "",
+  keywords: (),
+  abstract: [],
+  doc_type: "NOTE",
+  make-venue: make-venue,
+  make-title: make-title,
+  body,
 ) = {
-    set page(
-      paper: "a4",
-      margin: (top: 1.9cm, bottom: 1in, x: 1.6cm),
-      columns: 2
-    )
-    set par(justify: true)
-    set text(10pt, font: "Zen Old Mincho")
-    set list(indent: 8pt)
-    // show link: set text(underline: false)
-    show heading: set text(size: 11pt)
-    show heading.where(level: 1): set text(font: "Zen Kaku Gothic New", fill: rgb("004b71"), size: 12pt)
-    show heading: set block(below: 8pt)
-    show heading.where(level: 1): set block(below: 12pt)
+  set page(
+    paper: "a4",
+    margin: (top: 1.9cm, bottom: 1in, x: 1.6cm),
+    columns: 2,
+  )
 
-    // make-venue に doc_type を渡すように変更
-    place(make-venue(doc_type), top, scope: "parent", float: true) // <--- 変更
-    place(
-      make-title(title, authors, date, abstract, keywords),
-      top,
-      scope: "parent",
-      float: true
-    )
+  // 日本語テキストの可読性向上のための設定
+  set par(
+    justify: true,
+    leading: 1.1em,
+    spacing: 1.9em,
+    first-line-indent: (
+      all: true,
+      amount: 1em,
+    ),
+  )
+  set text(10pt, lang: "ja", font: "Zen Old Mincho")
+  set list(indent: 8pt)
+  // show link: set text(underline: false)
+  show heading: set text(size: 11pt)
+  show heading.where(level: 1): set text(font: "Zen Kaku Gothic New", fill: rgb("004b71"), size: 12pt)
+  show heading.where(level: 2): set text(font: "Zen Kaku Gothic New", fill: rgb("004b71"), size: 11pt)
+  show heading.where(level: 3): set text(font: "Zen Kaku Gothic New", fill: rgb("004b71"), size: 10pt)
+  show heading: set block(above: 16pt, below: 8pt)
+  show heading.where(level: 1): set block(below: 12pt)
+  show heading.where(level: 2): set block(below: 12pt)
+  show heading.where(level: 3): set block(below: 12pt)
+
+  place(make-venue(doc_type), top, scope: "parent", float: true)
+  place(
+    make-title(title, authors, date, abstract, keywords),
+    top,
+    scope: "parent",
+    float: true,
+  )
 
 
-    show figure: align.with(center)
-    show figure: set text(8pt)
-    show figure.caption: pad.with(x: 10%)
+  show figure: align.with(center)
+  show figure: set text(8pt)
+  show figure.caption: pad.with(x: 10%)
 
-    // show: columns.with(2)
-    body
-  }
+  //表のときにはキャプションを上へ
+  show figure.where(kind: table): set figure.caption(position: top)
+
+  // show: columns.with(2)
+  body
+}
