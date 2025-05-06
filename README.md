@@ -4,12 +4,23 @@
 
 This is a typst template for creating papers in the Taniii style. Forked from https://github.com/JamesxX/graceful-genetics; Thanks for the original work.
 
+## 日本語対応
+
+- 段落の字下げ (見出しの直下も字下げする)
+- 行間
+- 日本語フォント (Zen Kaku Gothic New, Zen Old Mincho)
+- 表の上にキャプション
+
 ## Media
 
 <p align="center">
-  <img alt="Light" src="./thumbnails/1.png" width="45%">
+  <img alt="paper" src="./thumbnails/paper.jpg" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="./thumbnails/2.png" width="45%">
+  <img alt="progress report" src="./thumbnails/progress_report.jpg" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="./thumbnails/note.jpeg" width="45%">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img alt="Dark" src="./thumbnails/log.jpeg" width="45%">
 </p>
 
 ## Getting Started
