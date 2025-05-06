@@ -115,6 +115,7 @@
     paper: "a4",
     margin: (top: 1.9cm, bottom: 1in, x: 1.6cm),
     columns: 2,
+    numbering: "1", // ページ番号を追加
   )
 
   // 日本語テキストの可読性向上のための設定
