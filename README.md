@@ -18,9 +18,12 @@ This is a typst template for creating papers in the Taniii style. Forked from ht
 &nbsp; &nbsp; &nbsp; &nbsp;
   <img alt="progress report" src="./thumbnails/progress_report.jpg" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="./thumbnails/note.jpeg" width="45%">
+</p>
+
+<p align="center">
+  <img alt="note" src="./thumbnails/note.jpeg" width="45%">
 &nbsp; &nbsp; &nbsp; &nbsp;
-  <img alt="Dark" src="./thumbnails/log.jpeg" width="45%">
+  <img alt="log" src="./thumbnails/log.jpeg" width="45%">
 </p>
 
 ## Getting Started
