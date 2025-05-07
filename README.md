@@ -11,6 +11,8 @@ This is a typst template for creating papers in the Taniii style. Forked from ht
 - 日本語フォント (Zen Kaku Gothic New, Zen Old Mincho)
 - 表の上にキャプション
 
+など...
+
 ## Media
 
 <p align="center">
