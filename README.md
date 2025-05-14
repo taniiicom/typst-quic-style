@@ -15,6 +15,12 @@ Forked from [JamesxX/graceful-genetics](https://github.com/JamesxX/graceful-gene
 
 など...
 
+## Get Started
+
+- Linux: ~/.local/share/typst/packages/local
+- macOS: ~/Library/Application Support/typst/packages/local
+- Windows: %APPDATA%\typst\packages\local
+
 ## Media
 
 <p align="center">
