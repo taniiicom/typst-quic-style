@@ -13,6 +13,12 @@ This is a typst template for creating papers in the Taniii style. Forked from ht
 
 など...
 
+## Get Started
+
+- Linux: ~/.local/share/typst/packages/local
+- macOS: ~/Library/Application Support/typst/packages/local
+- Windows: %APPDATA%\typst\packages\local
+
 ## Media
 
 <p align="center">
