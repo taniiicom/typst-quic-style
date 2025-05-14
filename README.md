@@ -2,7 +2,9 @@
 
 ![](thumbnails/typst-quic-style-design.png)
 
-This is a typst template for creating papers in the Taniii style. Forked from https://github.com/JamesxX/graceful-genetics; Thanks for the original work.
+A cohesive Typst design template that can be used in various situations—daily life, research, and experiments!
+
+Forked from [JamesxX/graceful-genetics](https://github.com/JamesxX/graceful-genetics) — thanks!
 
 ## 日本語対応
 
@@ -33,7 +35,7 @@ This is a typst template for creating papers in the Taniii style. Forked from ht
 To use this template, simply import it as shown below:
 
 ```typ
-#import "@local/typst-quic-style:0.0.1"
+#import "@preview/typst-quic-style:0.0.1"
 
 #show: typst-quic-style.template.with(
   title: [タイトル],
@@ -62,7 +64,8 @@ To use this template, simply import it as shown below:
   doi: "",
   abstract: [
     Recent advances in space-based document processing have enabled faster mail delivery between different planets of a solar system. Given the time it takes for a message to be transmitted from one planet to the next, its estimated that even a one-way trip to a distant destination could take up to one year. During these periods of interplanetary mail delivery there is a slight possibility of mail being lost in transit. This issue is considered so serious that space management employs P.I. agents to track down and retrieve lost mail. We propose A-Mail, a new anti-matter based approach that can ensure that mail loss occurring during interplanetary transit is unobservable and therefore potentially undetectable. Going even further, we extend A-Mail to predict problems and apply existing and new best practices to ensure the mail is delivered without any issues. We call this extension AI-Mail.
-  ]
+  ],
+  doc_type: "PROGRESS_REPORT", // or "NOTE", "LOG", "PAPER"
 )
 
 // セクション
