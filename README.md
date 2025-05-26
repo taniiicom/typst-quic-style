@@ -15,11 +15,48 @@ Forked from [JamesxX/graceful-genetics](https://github.com/JamesxX/graceful-gene
 
 など...
 
-## Get Started
+## Required Fonts
+
+This template requires the following fonts:
+
+- [Zen Kaku Gothic New](https://fonts.google.com/specimen/Zen+Kaku+Gothic+New) - For Japanese sans-serif text
+- [Zen Old Mincho](https://fonts.google.com/specimen/Zen+Old+Mincho) - For Japanese serif text
+- TeX Gyre Heros - For English sans-serif text
+- TeX Gyre Pagella - For English serif text
+
+Please download and install these fonts on your system before using the template.
+
+### Font Installation
+
+1. Download the fonts:
+
+   - Zen fonts can be downloaded from Google Fonts
+   - TeX Gyre fonts can be downloaded from [GUST e-foundry](https://www.gust.org.pl/projects/e-foundry/tex-gyre)
+
+2. Install the fonts on your system:
+   - For Linux: Copy the font files to `~/.local/share/fonts/` and run `fc-cache -f -v`
+   - For macOS: Double-click the font files and click "Install Font"
+   - For Windows: Double-click the font files and click "Install"
+
+## Package Installation
 
 - Linux: ~/.local/share/typst/packages/local
 - macOS: ~/Library/Application Support/typst/packages/local
 - Windows: %APPDATA%\typst\packages\local
+
+## Package Structure
+
+The main components of this package are:
+
+- `src/` - Core implementation files
+- `template/` - Template files for different document types
+- `thumbnails/` - Preview images of the templates
+
+Additional files for development and documentation:
+
+- `docs/manual.pdf` - Detailed documentation of the package
+- `examples/` - Example documents showcasing different use cases
+- `tests/` - Test files for development
 
 ## Media
 
