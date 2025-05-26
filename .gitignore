@@ -1,0 +1,7 @@
+.github
+scripts
+tests
+Justfile
+docs/*
+!docs/*.pdf
+fonts
