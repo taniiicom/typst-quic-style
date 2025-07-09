@@ -1,4 +1,4 @@
-#import "@local/quic-style:0.0.1"
+#import "@preview/quic-style:0.0.1"
 
 #show: quic-style.template.with(
   title: [富士山周辺における高山植物の生態調査ノート],

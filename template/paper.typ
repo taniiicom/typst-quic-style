@@ -1,4 +1,4 @@
-#import "@local/quic-style:0.0.1"
+#import "@preview/quic-style:0.0.1"
 
 #show: quic-style.template.with(
   title: [日本語における助詞「は」と「が」の使い分けに関する認知言語学的考察],

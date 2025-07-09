@@ -1,4 +1,4 @@
-#import "@local/quic-style:0.0.1"
+#import "@preview/quic-style:0.0.1"
 
 #show: quic-style.template.with(
   title: [量子エラー訂正コードの最適化に関する研究進捗報告],

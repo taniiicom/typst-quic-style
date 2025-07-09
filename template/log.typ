@@ -1,5 +1,5 @@
 
-#import "@local/quic-style:0.0.1"
+#import "@preview/quic-style:0.0.1"
 
 #show: quic-style.template.with(
   title: [実験 : テルミット反応における酸化剤の影響],
